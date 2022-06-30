@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="parkingLot.css">
+    <script src="parkingLot.js"></script>
+</head>
+
+<body>
+ 
+    <h1>Track/\Car</h1>
+
+    <table id="mainTable" class="center" width="50%" height="50%">
+        <tr>
+            <td>
+                <div class="card">
+                    <table width="100%" height="100%">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group row">
+                                    <label for="colFormLabelSm"
+                                        class="col-sm-2 col-form-label col-form-label-sm">Entrance:</label>
+                                    <div class="col-sm-10">
+                                        <input type="datetime-local" class="form-control form-control-sm"
+                                            id="enterHour">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h3 id="output">0 lv</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group row">
+                                    <label for="colFormLabelSm"
+                                        class="col-sm-2 col-form-label col-form-label-sm">Exit:</label>
+                                    <div class="col-sm-10">
+                                        <input type="datetime-local" class="form-control form-control-sm"
+                                            id="hourOfLeaving">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="tdCenter">
+                                <button type="button" class="btn btn-outline-dark" id="calcBtn">Calculate</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table width="100%" height="100%" id="tableBody" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Model</th>
+                                <th scope="col">License plate</th>
+                                <th scope="col">Entrance</th>
+                                <th scope="col">Exit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td><input type="text" id="carModel"></td>
+                                <td><input type="text" id="carReg"></td>
+                                <td>
+                                    <input type="datetime-local" class="form-control form-control-sm"
+                                        id="tableDateEntrance">
+                                </td>
+                                <td>
+                                    <input type="datetime-local" class="form-control form-control-sm"
+                                        id="tableDateExit">
+                                </td>
+                                <td><button type="button" class="btn btn-dark" id="finalBtn">ADD</button></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
